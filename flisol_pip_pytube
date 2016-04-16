@@ -1,0 +1,38 @@
+No terminal do Debian 8, verifiique se o pip (gerenciador de pacotes do Python) está instalado, geralmente faz parte da instalação padrão:
+
+$ pip --version
+pip 8.1.1 from /usr/local/lib/python3.4/dist-packages (python 3.4)
+
+Se a saída for para uma versão Python 2.X, ao invés de Python 3.X, tente:
+
+$ pip3 --version
+
+Se não retornar para a versão 3, ou não existir uma instalação, use o seguinte comando com superuser:
+
+$ apt-get install python3-pip
+
+Com o pip instalado, basta executar o seguinte comando:
+
+$ pip install pytube
+
+Obs: Se já havia uma instalação do 'pip' para a versão 2.X, utilize "pip3 install pytube"
+
+Para verificar se a biblioteca está instalada:
+
+$ pip freeze
+
+ou
+
+$ pip3 freeze
+
+dependendo de como foi a instalação do pip.
+
+É possível fazer um teste no interpretador interativo do Python 3 com o comando
+
+$ python3
+
+e no ambiente do interpretador
+
+>>> import pytube
+
+Porém, o comando pip freeze é suficiente para a verificação.
